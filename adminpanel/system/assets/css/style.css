@@ -1,0 +1,48 @@
+
+
+#container{
+	background:#999;
+	width:1500px;
+	margin:10px auto;
+	padding:1px;
+	font-size:18px;
+	text-transform:capitalize;
+}
+
+
+
+
+
+
+.content{
+	background-color:#FFF;
+	padding:25px;
+	margin: 0px 0px 0px 0px;
+	overflow:hidden;
+}
+
+.content_head h5 a:hover{
+	text-decoration:underline;
+}
+#album_wrapper{
+	margin-left:60px;
+	background:1px solid #CCC;
+}
+.folder_holder{
+	width:150px;
+	height:200px;
+	float:left;
+	margin:30px;
+	border:1px solid #CCC;	
+}
+.folder_holder_img{
+	width:150px;
+	height:150px;
+	overflow:hidden;
+	cursor:pointer;
+}
+.photo_holder{
+	width:200px;
+	margin:5px;
+	float:left;
+}
