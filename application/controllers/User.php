@@ -38,12 +38,344 @@ class User extends CI_Controller {
 		$data['courseslist'] = $this->User_model->courseslist();
 		
 		$this->load->helper('url');
+		$currentURL = current_url(); //http://myhost/main
+		$params   = $_SERVER['QUERY_STRING']; //my_id=1,3
+		$fullURL = $currentURL . $params; 
+		
+		$data['pageseco_detail'] = $this->User_model->Checkpageurl($params);
+		$data['title']=$data['pageseco_detail'][0]['title'];
+		$data['meta_description']=$data['pageseco_detail'][0]['meta_description'];
+		$data['meta_keywords']=$data['pageseco_detail'][0]['meta_keywords'];
+		
+		
+		
+		
+		
 		$page_url=current_url();
 	    $data['page_url'] = $page_url;
 		
 		
 		$this->load->view('admin/index', $data);
     }
+	
+	
+	function profyear()
+	{
+		
+			$this->load->model('User_model');
+			$data['main_content'] = 'admin/profyear';
+			$val=$this->uri->segment_array();
+			$params= end($val);
+			$data['pageseco_detail'] = $this->User_model->Checkpageurl($params);
+			$data['title']=$data['pageseco_detail'][0]['title'];
+			$data['meta_description']=$data['pageseco_detail'][0]['meta_description'];
+			$data['meta_keywords']=$data['pageseco_detail'][0]['meta_keywords'];
+			$this->load->view('includes/template', $data);
+		
+	}
+	
+	
+	function diplomainIT()
+		{
+			$this->load->model('User_model');
+			$data['main_content'] = 'admin/diploma-in-IT';
+			$val=$this->uri->segment_array();
+			$params= end($val);
+			$data['pageseco_detail'] = $this->User_model->Checkpageurl($params);
+			$data['title']=$data['pageseco_detail'][0]['title'];
+			$data['meta_description']=$data['pageseco_detail'][0]['meta_description'];
+			$data['meta_keywords']=$data['pageseco_detail'][0]['meta_keywords'];
+			$this->load->view('includes/template', $data);
+
+			
+				
+		}
+	
+	
+	
+	
+	function studyinaustralia()
+		{
+			$this->load->model('User_model');
+			$data['main_content'] = 'admin/studyinaustralia';
+			$val=$this->uri->segment_array();
+			$params= end($val);
+			$data['pageseco_detail'] = $this->User_model->Checkpageurl($params);
+			$data['title']=$data['pageseco_detail'][0]['title'];
+			$data['meta_description']=$data['pageseco_detail'][0]['meta_description'];
+			$data['meta_keywords']=$data['pageseco_detail'][0]['meta_keywords'];
+			$this->load->view('includes/template', $data);
+
+			
+				
+		}
+		
+		
+		function arts()
+		{
+			$this->load->model('User_model');
+			$val=$this->uri->segment_array();
+			$params= end($val);
+			$data['pageseco_detail'] = $this->User_model->Checkpageurl($params);
+			$data['title']=$data['pageseco_detail'][0]['title'];
+			$data['meta_description']=$data['pageseco_detail'][0]['meta_description'];
+			$data['meta_keywords']=$data['pageseco_detail'][0]['meta_keywords'];
+			$data['main_content'] = 'products/arts';
+			$this->load->view('includes/template', $data);
+			
+		}
+		
+		
+		function accountsbankingandfinance()
+		{
+			$this->load->model('User_model');
+			$val=$this->uri->segment_array();
+			$params= end($val);
+			$data['pageseco_detail'] = $this->User_model->Checkpageurl($params);
+			$data['title']=$data['pageseco_detail'][0]['title'];
+			$data['meta_description']=$data['pageseco_detail'][0]['meta_description'];
+			$data['meta_keywords']=$data['pageseco_detail'][0]['meta_keywords'];
+			
+			$data['main_content'] = 'products/accountsbankingandfinance';
+			$this->load->view('includes/template', $data);
+			
+		}
+		
+		
+		function computerscienceandit()
+		{
+			$this->load->model('User_model');
+			$val=$this->uri->segment_array();
+			$params= end($val);
+			$data['pageseco_detail'] = $this->User_model->Checkpageurl($params);
+			$data['title']=$data['pageseco_detail'][0]['title'];
+			$data['meta_description']=$data['pageseco_detail'][0]['meta_description'];
+			$data['meta_keywords']=$data['pageseco_detail'][0]['meta_keywords'];
+			$data['main_content'] = 'products/computerscienceandit';
+			$this->load->view('includes/template', $data);
+			
+		}
+		
+		
+		function businessandmanagement()
+		{
+			$this->load->model('User_model');
+			$val=$this->uri->segment_array();
+			$params= end($val);
+			$data['pageseco_detail'] = $this->User_model->Checkpageurl($params);
+			$data['title']=$data['pageseco_detail'][0]['title'];
+			$data['meta_description']=$data['pageseco_detail'][0]['meta_description'];
+			$data['meta_keywords']=$data['pageseco_detail'][0]['meta_keywords'];
+			$data['main_content'] = 'products/businessandmanagement';
+			$this->load->view('includes/template', $data);
+			
+		}
+		
+		function engineering()
+		{
+			$this->load->model('User_model');
+			$val=$this->uri->segment_array();
+			$params= end($val);
+			$data['pageseco_detail'] = $this->User_model->Checkpageurl($params);
+			$data['title']=$data['pageseco_detail'][0]['title'];
+			$data['meta_description']=$data['pageseco_detail'][0]['meta_description'];
+			$data['meta_keywords']=$data['pageseco_detail'][0]['meta_keywords'];
+			$data['main_content'] = 'products/engineering';
+			$this->load->view('includes/template', $data);
+			
+		}
+		
+		
+		function fashionandethics()
+		{
+			$this->load->model('User_model');
+			$val=$this->uri->segment_array();
+			$params= end($val);
+			$data['pageseco_detail'] = $this->User_model->Checkpageurl($params);
+			$data['title']=$data['pageseco_detail'][0]['title'];
+			$data['meta_description']=$data['pageseco_detail'][0]['meta_description'];
+			$data['meta_keywords']=$data['pageseco_detail'][0]['meta_keywords'];
+			$data['main_content'] = 'products/fashionandethics';
+			$this->load->view('includes/template', $data);
+			
+		}
+		
+		function hospitalitytourismandhotelmanagement()
+		{
+			$this->load->model('User_model');
+			$val=$this->uri->segment_array();
+			$params= end($val);
+			$data['pageseco_detail'] = $this->User_model->Checkpageurl($params);
+			$data['title']=$data['pageseco_detail'][0]['title'];
+			$data['meta_description']=$data['pageseco_detail'][0]['meta_description'];
+			$data['meta_keywords']=$data['pageseco_detail'][0]['meta_keywords'];
+			$data['main_content'] = 'products/hospitalitytourismandhotelmanagement';
+			$this->load->view('includes/template', $data);
+			
+		}
+		
+		
+		
+		function law()
+		{
+			$this->load->model('User_model');
+			$val=$this->uri->segment_array();
+			$params= end($val);
+			$data['pageseco_detail'] = $this->User_model->Checkpageurl($params);
+			$data['title']=$data['pageseco_detail'][0]['title'];
+			$data['meta_description']=$data['pageseco_detail'][0]['meta_description'];
+			$data['meta_keywords']=$data['pageseco_detail'][0]['meta_keywords'];
+			
+			$data['main_content'] = 'products/law';
+			$this->load->view('includes/template', $data);
+			
+		}
+		
+			function mediaandcreativearts()
+		{
+			$this->load->model('User_model');
+			$val=$this->uri->segment_array();
+			$params= end($val);
+			$data['pageseco_detail'] = $this->User_model->Checkpageurl($params);
+			
+			$data['title']=$data['pageseco_detail'][0]['title'];
+			$data['meta_description']=$data['pageseco_detail'][0]['meta_description'];
+			$data['meta_keywords']=$data['pageseco_detail'][0]['meta_keywords'];
+			$data['main_content'] = 'products/mediaandcreativearts';
+			$this->load->view('includes/template', $data);
+			
+		}
+		
+			function nursing()
+		{
+			$this->load->model('User_model');
+			$val=$this->uri->segment_array();
+		$params= end($val);
+		$data['pageseco_detail'] = $this->User_model->Checkpageurl($params);
+		
+		$data['title']=$data['pageseco_detail'][0]['title'];
+		$data['meta_description']=$data['pageseco_detail'][0]['meta_description'];
+		$data['meta_keywords']=$data['pageseco_detail'][0]['meta_keywords'];
+			$data['main_content'] = 'products/nursing';
+			$this->load->view('includes/template', $data);
+			
+		}
+		
+	
+		
+		
+		
+	function studyinnewzealand()
+		{
+		$this->load->model('User_model');
+		
+		$val=$this->uri->segment_array();
+		$params= end($val);
+		$data['pageseco_detail'] = $this->User_model->Checkpageurl($params);
+		
+		$data['title']=$data['pageseco_detail'][0]['title'];
+		$data['meta_description']=$data['pageseco_detail'][0]['meta_description'];
+		$data['meta_keywords']=$data['pageseco_detail'][0]['meta_keywords'];
+		
+		$data['main_content'] = 'admin/studyinnewzealand';
+        $this->load->view('includes/template', $data);
+			
+		}
+		
+		function studyincanada()
+		{
+		$this->load->model('User_model');
+		$val=$this->uri->segment_array();
+		$params= end($val);
+		$data['pageseco_detail'] = $this->User_model->Checkpageurl($params);
+		
+		$data['title']=$data['pageseco_detail'][0]['title'];
+		$data['meta_description']=$data['pageseco_detail'][0]['meta_description'];
+		$data['meta_keywords']=$data['pageseco_detail'][0]['meta_keywords'];
+		
+		$data['main_content'] = 'admin/studyincanada';
+        $this->load->view('includes/template', $data);
+			
+		}
+		
+		function studyineurope()
+		{
+		$this->load->model('User_model');
+		$val=$this->uri->segment_array();
+		$params= end($val);
+		$data['pageseco_detail'] = $this->User_model->Checkpageurl($params);
+		
+		$data['title']=$data['pageseco_detail'][0]['title'];
+		$data['meta_description']=$data['pageseco_detail'][0]['meta_description'];
+		$data['meta_keywords']=$data['pageseco_detail'][0]['meta_keywords'];
+		
+		$data['main_content'] = 'admin/studyineurope';
+        $this->load->view('includes/template', $data);
+			
+		}
+	
+	function studyinusa()
+		{
+		$this->load->model('User_model');
+		$val=$this->uri->segment_array();
+		$params= end($val);
+		$data['pageseco_detail'] = $this->User_model->Checkpageurl($params);
+		if($data['pageseco_detail']!="")
+		{
+		$data['title']=$data['pageseco_detail'][0]['title'];
+		$data['meta_description']=$data['pageseco_detail'][0]['meta_description'];
+		$data['meta_keywords']=$data['pageseco_detail'][0]['meta_keywords'];
+		}
+		
+		$data['main_content'] = 'admin/studyinusa';
+        $this->load->view('includes/template', $data);
+			
+		}
+		
+		function studyinuk()
+		{
+		$this->load->model('User_model');
+		$val=$this->uri->segment_array();
+		$params= end($val);
+		$data['pageseco_detail'] = $this->User_model->Checkpageurl($params);
+		
+		$data['title']=$data['pageseco_detail'][0]['title'];
+		$data['meta_description']=$data['pageseco_detail'][0]['meta_description'];
+		$data['meta_keywords']=$data['pageseco_detail'][0]['meta_keywords'];
+		
+		$data['main_content'] = 'admin/studyinuk';
+        $this->load->view('includes/template', $data);
+			
+		}
+		
+		
+		
+		function ajaxRequest()
+		{
+			
+			$this->load->model('Users_model');
+		
+			
+					$dataarray = array();
+					$email=$this->input->post('email');;
+                    $dataarray['email'] = $this->input->post('email');
+					$checkemail=$this->Users_model->subscribe_checkEmailExist($email);
+					if($checkemail==1)
+					{
+					
+					 $msg="Email already exist in our record.";
+					}
+					else
+					{
+					
+					$insertid = $this->Users_model->subscribe_user_Record($dataarray);
+					$msg="Your Email subscribe successfully.";
+					}
+			echo $msg;
+			die;
+		}
+	
+	
 	
 	
 	function program()
@@ -59,6 +391,12 @@ class User extends CI_Controller {
 	{
 		$this->load->model('User_model');
 		$data['courseslist'] = $this->User_model->courseslist();
+		$val=$this->uri->segment_array();
+		$params= end($val);
+		$data['pageseco_detail'] = $this->User_model->Checkpageurl($params);
+		$data['title']=$data['pageseco_detail'][0]['title'];
+		$data['meta_description']=$data['pageseco_detail'][0]['meta_description'];
+		$data['meta_keywords']=$data['pageseco_detail'][0]['meta_keywords'];
 		$data['main_content'] = 'admin/ielts';
         $this->load->view('includes/template', $data);
 		
@@ -71,6 +409,15 @@ class User extends CI_Controller {
         $data['role'] = $this->session->userdata('role');
 		$this->load->model('User_model');
 		$data['courseslist'] = $this->User_model->courseslist();
+		
+		$val=$this->uri->segment_array();
+		$params= end($val);
+		$data['pageseco_detail'] = $this->User_model->Checkpageurl($params);
+		$data['title']=$data['pageseco_detail'][0]['title'];
+		$data['meta_description']=$data['pageseco_detail'][0]['meta_description'];
+		$data['meta_keywords']=$data['pageseco_detail'][0]['meta_keywords'];
+		
+		
         $data['main_content'] = 'admin/aboutus';
         $this->load->view('includes/template', $data);
 		
@@ -84,6 +431,14 @@ class User extends CI_Controller {
         $data['role'] = $this->session->userdata('role');
 		$this->load->model('User_model');
 		$data['courseslist'] = $this->User_model->courseslist();
+		
+		$val=$this->uri->segment_array();
+		$params= end($val);
+		$data['pageseco_detail'] = $this->User_model->Checkpageurl($params);
+		$data['title']=$data['pageseco_detail'][0]['title'];
+		$data['meta_description']=$data['pageseco_detail'][0]['meta_description'];
+		$data['meta_keywords']=$data['pageseco_detail'][0]['meta_keywords'];
+		
         $data['main_content'] = 'admin/ourservices';
         $this->load->view('includes/template', $data);
 		
@@ -110,6 +465,12 @@ class User extends CI_Controller {
 		 $this->load->model('Users_model');
 		 $this->load->model('User_model');
 		$data['courseslist'] = $this->User_model->courseslist();
+		$val=$this->uri->segment_array();
+		$params= end($val);
+		$data['pageseco_detail'] = $this->User_model->Checkpageurl($params);
+		$data['title']=$data['pageseco_detail'][0]['title'];
+		$data['meta_description']=$data['pageseco_detail'][0]['meta_description'];
+		$data['meta_keywords']=$data['pageseco_detail'][0]['meta_keywords'];
 		
 		if (isset($_REQUEST['submit'])!='') {
 			
@@ -125,12 +486,12 @@ class User extends CI_Controller {
                 $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
 				
 				
-                $this->form_validation->set_rules('phone', 'Phone No', 'trim|required|numeric|max_length[30]');
+                $this->form_validation->set_rules('phone', 'Phone No', 'trim|required|numeric|max_length[10]');
 				
 			
 				
 				
-                $this->form_validation->set_rules('course', 'Course', 'trim|required|min_length[4]|max_length[40]');
+                $this->form_validation->set_rules('course', 'Course', 'trim|required|min_length[3]|max_length[40]');
 				
 					
 
@@ -150,16 +511,8 @@ class User extends CI_Controller {
 				    //$this->load->view('form1');
                    $this->session->set_flashdata('error', 'Please check fill data.');
 				   
-					
-				   
-				   
-				   
 				   
                 } else {
-					
-				
-				
-		
 					
 					
 					$dataarray = array();
@@ -225,14 +578,14 @@ class User extends CI_Controller {
           </body>
           </html>
          ";
-			$headers = "From:no-reply@iwilpro.com\r\n";
+			$headers = "From:no-reply@maxscholarship.com\r\n";
 			$headers .= "Mime-Version: 1.0\r\n";
 			$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+			
+		    $toEmail = 'info@maxscholarship.com'; 
 
-		    $toEmail = $email; 
-
-			$subject = "Contact us Enquiry of i wil Pro";
-		    //$mail_sent = mail($toEmail, $subject, $message, $headers);
+			$subject = "Contact us Enquiry of max scholarship";
+		    $mail_sent = mail($toEmail, $subject, $message, $headers);
 
 			//$this->mailsendf($subject, $message);
 			redirect('User/contactus'); 
@@ -308,6 +661,9 @@ class User extends CI_Controller {
 	function subscribe()
 	{
 		 $this->load->model('Users_model');
+		 
+		 
+		 
 		$email=$_REQUEST['email'];
 		$data=array();
 		$data['email']=$email;

@@ -41,6 +41,18 @@ public function __construct()
 	
 	
 	
+	function Checkpageurl($url)
+	{
+		
+		  $query = $this->db->query("SELECT * FROM page_seo WHERE page_name='".$url."'");
+          $data = $query->num_rows();
+          $datafetch = $query->result_array();
+          return $datafetch;
+		
+	}
+	
+	
+	
 	 public function countOrdersaveData($email) {
 
 	   

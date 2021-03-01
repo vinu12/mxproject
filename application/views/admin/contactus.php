@@ -8,13 +8,18 @@
       Contact Section
     ============================-->
     <section id="contact" class="section-bg wow fadeInUp">
+        <div class="contactusheader">
+        <div class="container">
+
+            <div class="section-contactpage">
+                <h3>Contact Us</h3>
+                <p></p>
+            </div>
+        </div>
+    </div>
       <div class="container">
 
-        <div class="section-header">
-          <h3>Contact Us</h3>
-           <p class="text-center"> Please feel free to fill our contact form and our business analyst would get in touch with you shortly with a quote.</p>
-        </div>
-
+        
         <div class="row contact-info">
 
           <div class="col-md-4">

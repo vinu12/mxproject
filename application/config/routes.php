@@ -61,6 +61,23 @@ $route['default_controller'] = 'User';
 $route['404_override'] = 'Error_pages/index';
 
 
+$route['diploma-in-leadership-and-management'] = 'courses/diplomainleadershipandmanagement';
+$route['diploma-in-it'] = 'courses/diplomainit';
+$route['bachelor-in-itc'] = 'courses/bachelorinitc';
+$route['bachelor-in-business'] = 'courses/bachelorinbusiness';
+$route['bachelor-in-commerce'] = 'courses/bachelorincommerce';
+$route['bachelor-of-information-system'] = 'courses/bachelorofinformationsystem';
+
+$route['master-of-technology'] = 'courses/masteroftechnology';
+$route['master-of-professional-accounting'] = 'courses/masterofprofessionalaccounting';
+$route['master-of-business-adminstrator'] = 'courses/masterofbusinessadminstrator';
+
+
+
+
+
+
+$route['profyear'] = 'User/profyear';
 $route['advertise'] = 'User/advertise';
 $route['register'] = 'User/register';
 $route['ourteam'] = 'User/ourteam';
@@ -68,6 +85,28 @@ $route['aboutus'] = 'User/aboutus';
 $route['ourservices'] = 'User/ourservices';
 $route['courses'] = 'User/program';
 $route['contactus'] = 'User/contactus';
+$route['study-in-australia'] = 'User/studyinaustralia';
+$route['study-in-new-zealand'] = 'User/studyinnewzealand';
+$route['study-in-canada'] = 'User/studyincanada';
+$route['study-in-europe'] = 'User/studyineurope';
+$route['study-in-usa'] = 'User/studyinusa';
+$route['study-in-uk'] = 'User/studyinuk';
+$route['arts'] = 'User/arts';
+$route['accounts-banking-and-finance'] = 'User/accountsbankingandfinance';
+$route['computer-science-and-it'] = 'User/computerscienceandit';
+$route['business-and-management'] = 'User/businessandmanagement';
+$route['engineering'] = 'User/engineering';
+$route['fashion-and-ethics'] = 'User/fashionandethics';
+$route['hospitality-tourism-and-hotelmanagement'] = 'User/hospitalitytourismandhotelmanagement';
+$route['law'] = 'User/law';
+$route['media-and-creative-arts'] = 'User/mediaandcreativearts';
+$route['nursing'] = 'User/nursing';
+
+
+
+
+
+
 $route['ielts'] = 'User/ielts';
 //$route['program/(:any)'] = 'User/courses/details/$1';
 

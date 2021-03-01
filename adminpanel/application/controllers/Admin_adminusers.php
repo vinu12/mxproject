@@ -2283,6 +2283,42 @@ class Admin_adminusers extends CI_Controller {
         $data['main_content'] = 'admin/adminusers/users';
         $this->load->view('includes/template', $data);
     }
+	
+	
+	
+	function enquiry()
+	{
+		
+		 if (!$this->session->userdata('role')) {
+            redirect('User/isLoggedIn');
+        }
+
+
+        $data['role'] = $this->session->userdata('role');
+        $searchText = $this->security->xss_clean($this->input->post('searchText'));
+        $data['searchText'] = $searchText;
+
+
+        $this->load->library('pagination');
+
+        $count = $this->user_model->userenquiryCount($searchText);
+
+        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 1;
+
+
+        $data['userRecords'] = $this->user_model->pageseolist($searchText);
+
+        $this->global['pageTitle'] = 'CodeInsect : User Listing';
+        $data['totaldata'] = $this->user_model->user_total();
+
+
+        $data['main_content'] = 'admin/adminusers/users';
+        $this->load->view('includes/template', $data);
+		
+	}
+	
+	
+	
 
     function workcategorylist() {
         $data['role'] = $this->session->userdata('role');
@@ -2838,6 +2874,91 @@ class Admin_adminusers extends CI_Controller {
         $data['main_content'] = 'admin/adminusers/liveuser';
         $this->load->view('includes/template', $data);
     }
+	
+	
+	function pageseo() {
+        $data['role'] = $this->session->userdata('role');
+        $this->load->model('Register_model');
+        $data['user_result_seo'] = $this->Register_model->pageseo();
+        $data['main_content'] = 'admin/adminusers/pageseo';
+        $this->load->view('includes/template', $data);
+    }
+	
+	
+	function userenquiry()
+	{
+		
+		$data['role'] = $this->session->userdata('role');
+        $this->load->model('Register_model');
+        $data['user_result_enquiry'] = $this->Register_model->userenquiry();
+        $data['main_content'] = 'admin/adminusers/userenquiry';
+        $this->load->view('includes/template', $data);
+	}
+	
+	function editseoprogram($id)
+	{
+		
+		
+		$editidvalid =  $id;
+        $this->load->model('Register_model');
+		$data['edit_result_seo'] = $this->Register_model->editpageseo($editidvalid);
+		
+		$data['user_blog'] = $flag;
+        $data['role'] = $this->session->userdata('role');
+        $data['main_content'] = 'admin/adminusers/editseoprogram';
+        $this->load->view('includes/template', $data);
+		
+	}
+	
+	
+	function updateseoprogram()
+	{
+		
+		 $this->load->model('Register_model');
+		
+	    if ($this->input->post("Submit") != false) 
+		{
+		
+		
+	
+
+        $updateid = $this->input->post('updateid');
+        $data['role'] = $this->session->userdata('role');
+
+        $this->load->library('form_validation');
+
+        $this->form_validation->set_rules('page_name', 'page name', 'trim|required');
+        $this->form_validation->set_rules('title', 'Title', 'trim|required');
+
+        $this->form_validation->set_rules('meta_keywords', 'Meta keywords', 'trim|required');
+
+        $this->form_validation->set_rules('description', 'Meta description', 'trim|required');
+
+        if ($this->form_validation->run() == FALSE) {
+
+            $this->session->set_flashdata('error', 'Please check fill data.');
+            redirect('admin_adminusers/editseoprogram/'.$updateid);
+        } else {
+
+            $data['role'] = $this->session->userdata('role');
+            $updateRecord = array();
+
+            $updateRecord['page_name'] = $this->input->post('page_name');
+            $updateRecord['title'] = $this->input->post('title');
+            $updateRecord['meta_keywords'] = $this->input->post('meta_keywords');
+            $updateRecord['meta_description'] = $this->input->post('description');
+
+
+            $this->db->where('id', $updateid);
+            $resultdata = $this->db->update('page_seo', $updateRecord);
+
+            $this->session->set_flashdata('success', 'Record update successfully');
+		}
+            redirect('admin_adminusers/pageseo', 'refresh');
+        }
+	}
+		
+	
 
     function deleteliveuser() {
 

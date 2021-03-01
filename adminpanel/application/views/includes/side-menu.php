@@ -103,19 +103,40 @@ if ($role == 1) {
                 </li>
 				
 				
-				<!--<li class="treeview active">
+				<li class="treeview active">
                     <a href="javascript:void(0);">
-                        <i class="fa fa-folder"></i> <span>Publish Video management</span>
+                        <i class="fa fa-folder"></i> <span>Publish Page SEO management</span>
                         <span class="pull-right-container">
                             <i class="fa fa-angle-left pull-right"></i>
                         </span>
                     </a>
                     <ul class="treeview-menu" style="display:none!important;">
                        
-                        <li><a href="<?php echo base_url(); ?>admin_adminusers/publish_feed"><i class="fa fa-circle-o"></i> Publish Video List</a></li>
+                        <li><a href="<?php echo base_url(); ?>admin_adminusers/pageseo"><i class="fa fa-circle-o"></i> Page seo</a></li>
 						
 						
-							<li><a href="<?php echo base_url(); ?>admin_adminusers/add_feed"><i class="fa fa-circle-o"></i> Add video List</a></li>
+							
+						
+
+
+
+                    </ul>
+                </li>
+				
+				
+				<li class="treeview active">
+                    <a href="javascript:void(0);">
+                        <i class="fa fa-folder"></i> <span>Enquiry  Management</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu" style="display:none!important;">
+                       
+                        <li><a href="<?php echo base_url(); ?>admin_adminusers/userenquiry"><i class="fa fa-circle-o"></i>Publish Enquiry</a></li>
+						
+						
+							
 						
 
 
@@ -128,7 +149,7 @@ if ($role == 1) {
 				
 				
 
-                <li class="treeview active">
+               <!-- <li class="treeview active">
                     <a href="javascript:void(0);">
                         <i class="fa fa-folder"></i> <span>Advertisement management</span>
                         <span class="pull-right-container">

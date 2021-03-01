@@ -6,13 +6,19 @@
       Contact Section
     ============================-->
    <section id="contact" class="section-bg wow fadeInUp">
+       
+       <div class="ieltsheader">
+        <div class="container">
+
+            <div class="section-ieltspage">
+                <h3>IELTS</h3>
+                <p></p>
+            </div>
+        </div>
+    </div>
       <div class="container">
 
-        <div class="section-header">
-          <h3>IELTS</h3>
-          <p></p>
-        </div>
-
+       
        
 		<h3><b>About</b></h3>
         <div class="form">

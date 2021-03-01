@@ -105,6 +105,7 @@
 <th>Program Price</th>
 <th>Program Desc</th>
 <th>Program Pdf</th>
+<th class="text-center">status</th>
 <th class="text-center">Actions</th>
 </tr>
 </thead>
@@ -208,8 +209,8 @@ orderData: [ 0, 1 ]
 targets: [ 1 ],
 orderData: [ 1, 0 ]
 }, {
-targets: [ 5 ],
-orderData: [ 5, 0 ]
+targets: [ 6 ],
+orderData: [ 6, 0 ]
 },
 
 

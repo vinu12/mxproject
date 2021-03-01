@@ -40,6 +40,71 @@ class Register_model extends CI_Model {
 	}
 	
 	
+	
+	
+	function pageseo()
+	{
+		
+		$this->db->select("*");
+        $this->db->from("page_seo");
+		$this->db->order_by("id", "DESC");
+		$query = $this->db->get();
+		$cnt=$query->num_rows();
+		if($query->num_rows > 0)
+		{
+			return $query->result_array();
+		}
+		else
+		{
+			return false;
+		}	
+		
+	}
+	
+	
+	function userenquiry()
+	{
+		
+		$this->db->select("*");
+        $this->db->from("contactus");
+		$this->db->order_by("id", "DESC");
+		$query = $this->db->get();
+		$cnt=$query->num_rows();
+		if($query->num_rows > 0)
+		{
+			return $query->result_array();
+		}
+		else
+		{
+			return false;
+		}	
+		
+	}
+	
+	
+	
+	
+	
+	function editpageseo($editid)
+	{
+		$this->db->select("*");
+        $this->db->from("page_seo");
+		$this->db->where("id", $editid);
+		$query = $this->db->get();
+		$cnt=$query->num_rows();
+		if($query->num_rows > 0)
+		{
+			return $query->result_array();
+		}
+		else
+		{
+			return false;
+		}	
+		
+	}
+	
+	
+	
 	function Userdetails()
 	{
 		

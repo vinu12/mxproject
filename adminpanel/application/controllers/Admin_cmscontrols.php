@@ -26,7 +26,7 @@ class Admin_cmscontrols extends CI_Controller {
 		
     }
 
-    function addinformation() {
+    function downloadinformation() {
 			
 	$this->load->model('Members_invoice_old_model');
 	$this->load->model('Members_invoice_model');

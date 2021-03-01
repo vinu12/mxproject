@@ -1,0 +1,211 @@
+body {
+  background: #fff;
+  color: #000;
+  font-family: "Open Sans", sans-serif;
+}
+
+
+.btmaxstudy a{
+    margin-top: -30px;position: relative;font-size: 1.3rem;
+}
+.gradiantcol
+{color: #fff;
+    border-radius: 24px;
+   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fd2606+0,f50881+50,4506c3+100 */
+background: #fd2606; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #fd2606 0%, #f50881 50%, #4506c3 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  #fd2606 0%,#f50881 50%,#4506c3 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  #fd2606 0%,#f50881 50%,#4506c3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fd2606', endColorstr='#4506c3',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+}
+
+a.login-btn-area{
+        border-right: 1px solid;
+    padding-right: 15px;
+}
+.max-owl{
+    text-align: center;
+}
+
+.owl-carousel .owl-item img{
+    width: 110px !important;display: initial !important;
+}
+.max-p{
+    padding-top: 20px;
+}
+
+.max-p p{
+    font-size: 14px;
+}
+.max-p h4
+{
+        font-weight: bold;
+    font-size: 22px;
+}
+.avail {
+    
+        padding: 60px 0;
+}
+.avail .availh3{
+        
+    font-size: 32px;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+#about .abouts{
+     font-size: 32px;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px; 
+}
+
+#about .subtittle h4{
+    font-size: 50px;
+    text-transform: capitalize;
+}
+@media all and (max-width:600px){
+   #about .subtittle h4{
+    font-size: 25px;
+} 
+    
+}
+.about_row
+{
+    padding: 40px 0;
+}
+
+
+.owl-nav .owl-prev {
+    left: 0;    border: 1px solid red;
+    padding: 0px 10px;
+}
+.owl-nav div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.38) !important; display: none;
+}
+.owl-nav .owl-next {
+    right: 0;    border: 1px solid red;
+    padding: 0px 10px;
+}
+
+.videomax img{
+    width: 300px;
+}
+h3.section-title:before
+
+{
+        content: '';
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+}
+h3.section-title:after
+
+{
+        content: '';
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #fb4343;
+    bottom: 0;
+    left: calc(50% - 20px);
+}
+
+@media all and (max-width:600px){
+    .avail .availh3{
+        
+    font-size: 25px;
+   
+}
+    
+    #about .abouts{
+     font-size: 25px;
+    
+}
+
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+.toparea {
+    display: flex;
+    justify-content: space-between;
+    background: #ffffff;    border-bottom: 1px solid #f1f1f1;    padding: 10px 0;
+}
+
+.toparea .topone {
+    padding-left: 60px;
+}
+
+.toparea .topthree {
+    padding-right: 60px;
+}
+
+.toparea .topone ul li {
+    display: inline-block;
+    text-transform: lowercase;
+    font-size: 13px;
+    border-right: 1px solid #BDBDBD;
+    margin-right: 15px;
+    padding-right: 15px;
+}
+.toparea .topone ul li i{
+        padding-right: 10px;
+    color: #7b7b7b;font-size: 15px;
+}
+.toparea .topone ul li a{
+    font-size: 15px;
+}
+.toparea .topone ul{
+    margin-bottom: 0;
+     padding-left: 0;
+}
+
+.toparea .topthree ul li {
+    font-size: 13px;
+    padding-right: 0;
+    display: inline-block;
+    margin-left: 15px;
+    position: relative;
+}
+.toparea .topthree ul li i{
+    padding-right: 10px;font-size: 15px;
+    color: red;
+}
+.toparea .topthree ul li a{
+    font-size: 15px;
+}
+.toparea .topthree ul{
+    margin-bottom: 0;
+     
+}
+@media all and (max-width:600px){
+    
+    .toparea {
+    display: none;
+    
+
+}
+    
+ /*--shyju video---*/
+
+    

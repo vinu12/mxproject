@@ -27,6 +27,9 @@ class User_model extends CI_Model
 	
 	
 	
+	
+	
+	
 	public function detailsusersRcord($page = "") {
 
 
@@ -302,6 +305,12 @@ class User_model extends CI_Model
         
         return $query->row();
     }
+	
+	
+	
+	
+	
+	
 	
 	function managerlist()
 	{
